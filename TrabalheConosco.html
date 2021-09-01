@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <script src="./script.js"></script>
+    <title>SpaceX</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nave-box">
+                <div class="content-img">
+                    <a href="PrincipalSpaceX.html"><img src="img/logo.png" alt="LogoSpaceX"></a>
+                </div>
+                <div class="content-links">
+                    <ul>
+                        <li><a href="NavesEspaciais.html">Sobre as Naves Espaciais</a></li>
+                        <li><a href="TrabalheConosco.html">Trabalhe Conosco</a></li>
+                    </ul>
+                </div>
+                <hr>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <div class="w3-panel w3-card-4">            
+            <form class="w3-panel" style="width: 95%">
+                <h2>Cadastre-se em nosso sistema</h2>
+                <h4>Ficaremos felizes em conhecê-lo</h4>
+                <label for="name">Nome: </label>
+                <input class="form-control" type="text" name="name" id="name">
+                <label for="email">Email: </label>
+                <input class="form-control" type="email" name="email" id="email">
+                <label for="nave">Nave Espacial: </label>
+                <input class="form-control w3-border w3-animate-input" type="search" name="nave" id="nave" list="naves">
+                    <datalist id="naves" style="display: hidden;">
+                        <option value="Falcon 9">Falcon 9</option>
+                        <option value="Falcon Heavy">Falcon Heavy</option>
+                    </datalist>
+                <label for="cargo">Cargo Pretendido:</label>
+                <input class="form-control" type="text" name="cargo" id="cargo">
+                <br><br>
+                <button type="button" onclick="save()" class="btn btn-primary">Salvar Dados</button>
+            </form>
+        </div> 
+        <div class="record-table">
+            <table class="table table-striped">
+                <h2>Pessoas cadastradas</h2>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>E-mail</th>
+                        <th>Nave Espacial</th>
+                        <th>Cargo pretendido</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="record-info">
+                    
+                </tbody>
+                
+            </table>
+        </div>      
+    </section>
+    
+</body>
+</html>
