@@ -25,8 +25,8 @@
                 </div>
                 <div class="content-links">
                     <ul>
-                        <li><a href="NavesEspaciais.html">Sobre as Naves Espaciais</a></li>
-                        <li><a href="TrabalheConosco.html">Trabalhe Conosco</a></li>
+                        <li><a href="./NavesEspaciais.html">Sobre as Naves Espaciais</a></li>
+                        <li><a href="./TrabalheConosco.html">Trabalhe Conosco</a></li>
                     </ul>
                 </div>
                 <hr>
@@ -45,15 +45,15 @@
                 <div class="w3-panel w3-card-4" style="width: 98%;">
                     <p>
                         <label for="nameNave">Nome da nave</label><br>
-                        <input class="form-control" type="text" name="nameNave" placeholder="Digite o nome da nave" required>
+                        <input class="form-control" type="text" name="nameNave" id="nameNave" placeholder="Digite o nome da nave" required>
                     </p>
                     <p>
                         <label for="urlNave">Url da imagem</label><br>
-                        <input class="form-control" type="url" name='urlNave' placeholder="Cole a url da imagem" required>
+                        <input class="form-control" type="url" name='urlNave' id='urlNave' placeholder="Cole a url da imagem" required>
                     </p>
                     <p>
                         <label for="descriptionNave">Descrição da nave</label><br>
-                        <input class="form-control" type="text" name='descriptionNave' placeholder="Digite uma breve descrição da nave" required>
+                        <input class="form-control" type="text" name='descriptionNave' id='descriptionNave' placeholder="Digite uma breve descrição da nave" required>
                     </p>
                     <p>
                         <button type="button" class="btn btn-primary" onclick="SalvarNave()">Salvar</button>

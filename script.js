@@ -42,16 +42,39 @@ function save() {
     document.getElementById("remove-button"+indice).appendChild(i) 
   
     indice += 1
+
+    ClearFormRecord()
   }
   else{
-    alert("Preencha todos os campos para continuar")
-  }
-  
+    if(name == ""){
+      alert("Digite o seu nome para continuar")
+      document.getElementById("name").focus()
+    }
+    if(email == ""){
+      alert("Digite o seu email para continuar")
+      document.getElementById("email").focus()
+    }
+    if(nave == ""){
+      alert("Digite o nome da sua nave para continuar")
+      document.getElementById("nave").focus()
+    }
+    if(cargo == ""){
+      alert("Digite o seu cargo para continuar")
+      document.getElementById("cargo").focus()
+    }
+  }  
 }
 
 function removeRow(button){
   let removeInfo = button.parentNode
   document.getElementById("record-info").removeChild(removeInfo)
+}
+
+function ClearFormRecord(){
+  document.querySelector("input[name='name']").value = ""
+  document.querySelector("input[name='email']").value = ""
+  document.querySelector("input[name='nave']").value = ""
+  document.querySelector("input[name='cargo']").value = ""
 }
 
 function ActiveForm(){
@@ -99,6 +122,17 @@ function SalvarNave(){
     RemoveForm()
   }
   else{
-    alert("Preenchimento de todos os campos obrigatório")
+    if(nameNave == ""){
+      alert("Digite o nome da nave para continuar")
+      document.getElementById("nameNave").focus()
+    }
+    if(urlNave == ""){
+      alert("Cole ou digite a url da nave para continuar")
+      document.getElementById("urlNave").focus()
+    }
+    if(descriptionNave == ""){
+      alert("Faça uma breve descrição da nave para continuar")
+      document.getElementById("descriptionNave").focus()
+    }
   }  
 }
