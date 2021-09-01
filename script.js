@@ -6,40 +6,47 @@ function save() {
   let email = document.querySelector("input[name='email']").value
   let nave = document.querySelector("input[name='nave']").value
   let cargo = document.querySelector("input[name='cargo']").value
-  let remove = document.createElement("button")
-  remove.type = "button"
-  remove.setAttribute("id", "remove-button"+indice)
-  remove.setAttribute("onclick", "removeRow(this)")
 
-  let i = document.createElement("i")
-  i.setAttribute("class", "bi bi-trash")
-
-  let tbody = document.getElementById("record-info")
-
-  let row = document.createElement("tr")
-  row.setAttribute("id", indice)
-
-  let newName = document.createElement("td")
-  let newEmail = document.createElement("td")
-  let newNave = document.createElement("td")
-  let newCargo = document.createElement("td")
-  let NewRemove = document.createElement("td")
-
-  newName.innerText = name
-  newEmail.innerText = email
-  newNave.innerText = nave
-  newCargo.innerText = cargo
-  NewRemove = remove
-
-  tbody.appendChild(row)
-  document.getElementById(indice).appendChild(newName) 
-  document.getElementById(indice).appendChild(newEmail) 
-  document.getElementById(indice).appendChild(newNave) 
-  document.getElementById(indice).appendChild(newCargo)  
-  document.getElementById(indice).appendChild(NewRemove)
-  document.getElementById("remove-button"+indice).appendChild(i) 
-
-  indice += 1
+  if(name && email && nave && cargo != ""){
+    let remove = document.createElement("button")
+    remove.type = "button"
+    remove.setAttribute("id", "remove-button"+indice)
+    remove.setAttribute("onclick", "removeRow(this)")
+  
+    let i = document.createElement("i")
+    i.setAttribute("class", "bi bi-trash")
+  
+    let tbody = document.getElementById("record-info")
+  
+    let row = document.createElement("tr")
+    row.setAttribute("id", indice)
+  
+    let newName = document.createElement("td")
+    let newEmail = document.createElement("td")
+    let newNave = document.createElement("td")
+    let newCargo = document.createElement("td")
+    let NewRemove = document.createElement("td")
+  
+    newName.innerText = name
+    newEmail.innerText = email
+    newNave.innerText = nave
+    newCargo.innerText = cargo
+    NewRemove = remove
+  
+    tbody.appendChild(row)
+    document.getElementById(indice).appendChild(newName) 
+    document.getElementById(indice).appendChild(newEmail) 
+    document.getElementById(indice).appendChild(newNave) 
+    document.getElementById(indice).appendChild(newCargo)  
+    document.getElementById(indice).appendChild(NewRemove)
+    document.getElementById("remove-button"+indice).appendChild(i) 
+  
+    indice += 1
+  }
+  else{
+    alert("Preencha todos os campos para continuar")
+  }
+  
 }
 
 function removeRow(button){
