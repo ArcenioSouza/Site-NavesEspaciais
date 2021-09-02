@@ -136,3 +136,13 @@ function SalvarNave(){
     }
   }  
 }
+
+function toggleIn() {
+  let linksToggle = document.getElementById("content-links-toggle")
+    linksToggle.style.display = "flex" 
+}
+
+function toggleOut() {
+  let linksToggle = document.getElementById("content-links-toggle")
+    linksToggle.style.display = "none" 
+}

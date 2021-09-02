@@ -18,7 +18,6 @@
 
 <body>
     <header>
-        <nav>
             <div class="nave-box">
                 <div class="content-img">
                     <a href="index.html"><img src="img/logo.png" alt="LogoSpaceX"></a>
@@ -29,9 +28,17 @@
                         <li><a href="./TrabalheConosco.html">Trabalhe Conosco</a></li>
                     </ul>
                 </div>
-                <hr>
             </div>
-        </nav>
+        <div>
+            <button id="toggle" onmouseover="toggleIn()"><i class="bi bi-list" style="font-weight:700"></i></button>
+        </div>
+    </div>
+    <div id="content-links-toggle" onmouseleave="toggleOut()">
+        <ul>
+            <li><a href="./NavesEspaciais.html">Sobre as Naves Espaciais</a></li>
+            <li><a href="./TrabalheConosco.html">Trabalhe Conosco</a></li>                    
+        </ul>
+    </div>
     </header>
     <section>
         <div class="content-sectionHeader">
